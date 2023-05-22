@@ -1,47 +1,41 @@
-# Astro Starter Kit: Minimal
+# Crane - A Robotic Arm Simulation
 
-```
-npm create astro@latest -- --template minimal
-```
+Welcome to Crane, a serverless robotic arm simulation. This application offers
+an interactive web-based environment to visualize and manipulate a 3D model of a
+robotic arm.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Tech Stack
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Crane is built using three core technologies:
 
-## 🚀 Project Structure
+[SST (Serverless Stack Toolkit)](https://sst.dev): SST is our serverless
+framework. It facilitates local development and testing of our serverless
+applications, and enables seamless deployment on AWS. This results in a scalable
+backend that can efficiently manage multiple user requests.
 
-Inside of your Astro project, you'll see the following folders and files:
+[Astro](https://astro.build): Astro is the chosen frontend framework for Crane.
+Its unique architecture enables us to create fast, optimized websites with a
+smaller footprint. Astro supports the use of your favorite JavaScript framework
+(or none at all), and delivers fully static HTML for quick loading and an
+SEO-friendly user experience.
 
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+[ThreeJS](https://threejs.org): I use ThreeJS as our WebGL rendering library to
+create interactive 3D content on the web. It simplifies the creation of complex
+3D graphics in the browser, making our application more engaging and visually
+appealing.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Project Description
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Crane is a web-based robotic arm simulation that allows users to observe and
+manipulate a 3D model of a robotic arm directly in their browsers. Users can
+control the arm's movements, simulate various tasks, and even tweak the model's
+parameters to observe different behaviors.
 
-Any static assets, like images, can be placed in the `public/` directory.
+The SST framework manages all the server-side operations, including handling
+user commands, managing the 3D model data, and communicating with the frontend.
+Astro, on the other hand, is used to build a fast, optimized frontend interface
+that communicates seamlessly with our SST backend.
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+ThreeJS plays a critical role in rendering the 3D robotic arm. It translates the
+model data into beautiful, interactive 3D graphics, providing users with a
+realistic and immersive simulation experience.
