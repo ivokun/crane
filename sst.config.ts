@@ -1,16 +1,16 @@
 import type { SSTConfig } from "sst";
-import { AstroSite } from "sst/constructs";
+import { App, AstroSite } from "sst/constructs";
 
 export default {
-  config(_input) {
+  config() {
     return {
       name: "crane",
-      region: "us-east-1",
+      region: "ap-southeast-3",
     };
   },
-  stacks(app) {
+  stacks(app: App) {
     app.stack(function Site({ stack }) {
-      const site = new AstroSite(stack, "site");
+      const site = new AstroSite(stack, "web");
       stack.addOutputs({
         url: site.url,
       });
